@@ -1,0 +1,17 @@
+<sons>
+<son>
+	<artiste>Lana Del Rey</artiste>
+	<titre>Video Games</titre>
+	<fichier>Video_Games</fichier>
+</son>
+<son>
+	<artiste>Lana Del Rey</artiste>
+	<titre>Born To Die</titre>
+	<fichier>Born_to_Die</fichier>
+</son>
+<son>
+	<artiste>Lana Del Rey</artiste>
+	<titre>Blue Jeans</titre>
+	<fichier>Blue_Jeans</fichier>
+</son>
+</sons>

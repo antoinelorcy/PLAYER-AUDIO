@@ -1,0 +1,327 @@
+/*
+
+	Antoine Lorcy
+	Flash
+	Lecteur Audio
+*/
+html, body{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: #262626;
+	color: #212121;
+	font-family: 'Droid Sans', sans-serif;
+	font-weight: 100;
+}
+.clearfix{
+	clear: both;
+}
+img.resize-background {
+    position: fixed;
+    z-index: -1;
+} 
+#wrapper{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+}
+#page-table {
+    height: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+#page-td {
+    height: 100%;
+    padding: 0;
+    vertical-align: middle;
+}
+#global {
+	height: 300px;
+    width: 960px;
+    margin: 0 auto;
+    text-align: left;
+  	background: url("../img/background-content.png") no-repeat;
+  	padding: 20px;
+  	position: relative;
+}
+#global #pochette{
+	position: absolute;
+	left: 305px;
+	top: 6px;
+}
+#global #about{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 250px;
+}
+#global h1{
+    display: block;
+	text-align: center;
+	color: #212121;
+	font-size: 50px;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 10px;
+	margin: 0;
+}
+#global h1 span{
+	font-size: 30px;
+	text-transform: none;
+	letter-spacing: normal;
+	padding-left: 5px;
+	color: #2DB8F2;
+}
+#global p{
+	color: #f9f9f9;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 18px;
+	margin-bottom: 20px;
+	font-family: 'Poiret One', cursive;
+	border-top: 1px dotted #212121;
+	border-bottom: 1px dotted #212121;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+#global #copyright{
+	font-size: 12px;
+	color: #eee;
+	text-align: center;
+	padding-top: 10px;
+}
+#global #copyright a{
+	text-decoration: none;
+	color: #eee;
+	border-bottom: 1px dotted #eee;
+}
+#global #copyright a:hover{
+	color: #2DB8F2;
+	border-bottom: 1px dotted #2DB8F2;
+}
+#global #choix-playlist a{
+	background: #212121;
+	padding: 5px 10px 5px 10px;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-size: 20px;
+	text-decoration: none;
+	color: #f9f9f9;
+}
+#global #choix-playlist a:hover{
+	background: #2DB8F2;
+}
+#global ul li{
+	text-align: center;
+	list-style: none;
+	margin-bottom: 15px;
+}
+#global ul li a{
+	background: #212121;
+	padding: 5px 10px 5px 10px;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-size: 20px;
+	text-decoration: none;
+	color: #f9f9f9;
+}
+#global ul li a:hover, div#global ul li a.active{
+	background: #2DB8F2;
+}
+
+#informations{
+	background: #262626;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 75px;
+	opacity: 0.9;
+}
+#informations #content-informations{
+	width: 750px;
+	margin: 0 auto;
+}
+#informations h1{
+    display: block;
+	text-align: center;
+	color: #fff;
+	font-size: 60px;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: -2px;
+	margin-top: 5px;
+}
+
+/* PLAYER + INFOS PISTES */
+#player{
+	background: #262626;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 75px;
+	opacity: 0.9;
+}
+#player #content-player{
+	width: 750px;
+	margin: 0 auto;
+}
+#player #controles{
+	float: left;
+	width: 307px;
+}
+#player ul{
+	margin: 0;
+	padding: 0;
+}
+#player ul li{
+	list-style: none;
+	float: left;
+}
+#player ul li a, #player ul li a:link, #player ul li a:visited{
+	text-decoration: none;
+}
+#player ul li a.lire{
+	background: url("../img/play.png") no-repeat;
+	width: 77px;
+	height: 75px;
+	display: block;
+}
+#player ul li a.lire:hover{
+	background: url("../img/play_hover.png") no-repeat;
+}
+#player ul li a.pause{
+	background: url("../img/pause.png") no-repeat;
+	width: 77px;
+	height: 75px;
+	display: block;
+}
+#player ul li a.pause:hover{
+	background: url("../img/pause_hover.png") no-repeat;
+}
+#player ul li a.stop{
+	background: url("../img/stop.png") no-repeat;
+	width: 77px;
+	height: 75px;
+	display: block;
+}
+#player ul li a.stop:hover{
+	background: url("../img/stop_hover.png") no-repeat;
+}
+#player ul li a.prev{
+	background: url("../img/prev.png") no-repeat;
+	width: 76px;
+	height: 75px;
+	display: block;
+}
+#player ul li a.prev:hover{
+	background: url("../img/prev_hover.png") no-repeat;
+}
+#player ul li a.next{
+	background: url("../img/next.png") no-repeat;
+	width: 77px;
+	height: 75px;
+	display: block;
+}
+#player ul li a.next:hover{
+	background: url("../img/next_hover.png") no-repeat;
+}
+#infos-piste{
+	float: left;
+	color: #f9f9f9;
+	width: 400px;
+	height: 75px;
+}
+#infos-piste #titre{
+	margin-bottom: 2px;
+    margin-left: 20px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+#infos-piste #titre span.artiste{
+	text-transform: uppercase;
+	letter-spacing: -2px;
+	font-size: 27px;
+	color: #eee;
+}
+#infos-piste #titre span.chanson{
+	text-transform: none;
+	letter-spacing: normal;
+	padding-left: 5px;
+	color: #2DB8F2;
+	font-size: 17px;
+}
+#infos-piste #duree{
+	font-size: 13px;
+	float: left;
+	margin-left: 20px;
+}
+#infos-piste #volume {
+    background: url("../img/volume_bg.png") no-repeat;
+    width: 152px;
+	height: 16px;
+    display: inline-block;
+    position: relative;
+    margin-left: 45px;
+}
+#infos-piste img {
+    display: inline-block;
+    position: absolute;
+    cursor: pointer;
+}
+#infos-piste #remplissage-gauche{
+	width: 5px;
+	height: 16px;
+	background: url("../img/remplissage-gauche.png") repeat-x;
+	top: 1px;
+    left: -1px;
+    position: absolute;
+    opacity: 0;
+}
+
+#infos-piste #remplissage{
+	width: 0px;
+	height: 16px;
+	background: url("../img/remplissage.png") repeat-x;
+	top: 1px;
+    left: 4px;
+    position: absolute;
+}
+#infos-piste #volume-remplissage-gauche{
+	width: 5px;
+	height: 16px;
+	background: url("../img/remplissage-gauche.png") repeat-x;
+	top: 1px;
+    left: -1px;
+    position: absolute;
+}
+
+#infos-piste #volume-remplissage{
+	width: 96px;
+	height: 16px;
+	background: url("../img/remplissage.png") repeat-x;
+	top: 1px;
+    left: 4px;
+    position: absolute;
+}
+#infos-piste #volumeHandler {
+    top: 0;
+    left: 96px;
+    position: absolute;
+} 
+#infos-piste #bar {
+    background: url("../img/bar.png") no-repeat;
+    width: 286px;
+	height: 16px;
+    display: inline-block;
+    position: relative;
+    margin-left: 20px;
+}
+#infos-piste #handler {
+    top: 0;
+    left: 0;
+    position: absolute;
+}

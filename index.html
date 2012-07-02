@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html 
+          PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+   <title>Audio. | Antoine Lorcy</title>
+   <!-- META -->
+   <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+   <meta name="ROBOTS" content="INDEX, FOLLOW" />
+   <meta content="licence, pro, webmestre, caen, portfolio, antoine, lorcy, 2012, 2011, webmaster, lp, normandie" name="keywords">
+   <meta content="Antoine Lorcy" name="author">
+   <meta content="Lecteyr audio flash et js" name="description">
+   	
+    <!-- FONTS -->
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Terminal+Dosis+Light">
+    <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>
+   <!-- CSS -->
+   <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+   <!-- JS -->
+   <script type="text/javascript" src="js/mootools-core.js"></script>
+   <script type="text/javascript" src="js/mootools-more.js"></script>
+   <script type="text/javascript" src="js/FitImage.js"></script>
+   <script type="text/javascript" src="js/player.js"></script>  
+</head>
+<body>
+	<!-- Wrapper -->
+	<div id="wrapper">
+		<div id="informations">
+			<div id="content-informations">
+				<h1>Lecteur Audio</h1>
+			</div>
+		</div>
+		<table id="page-table"><tr><td id="page-td">
+		    <div id="global">
+		    	<div id="pochette"><img src="http://antoinelorcy.com/flash-ext/pochettes/defaut_thumb.jpg" /></div>
+		        <div id="about">
+			        <h1>Audio<span>.</span></h1>
+					<p>
+						Lecteur audio Flash/JS réalisé pour le cours de flash animé par Didier Tirard. 
+					</p>
+					<div id="choix-playlist">
+						<a href="#" id="playlist-lana_del_rey">Lana Del Rey</a>
+						<a href="#" id="playlist-ratatat">Ratatat</a>
+					</div>
+					<ul class="playlist-lana_del_rey">
+						<li><a href="#" class="change" id="Blue_Jeans" rel="Blue Jeans">Blue Jeans</a></li>
+						<li><a href="#" class="change" id="Video_Games" rel="Video Games">Video Games</a></li>
+						<li><a href="#" class="change" id="Born_to_Die" rel="Born To Die">Born To Die</a></li>
+					</ul>
+					<ul class="playlist-ratatat">
+						<li><a href="#" class="change" id="Wildcat" rel="Wildcat">Wildcat</a></li>
+						<li><a href="#" class="change" id="Loud_Pipes" rel="Loud Pipes">Loud Pipes</a></li>
+						<li><a href="#" class="change" id="Seventeen_Years" rel="Seventeen Years">Seventeen Years</a></li>
+					</ul>
+					<div class="clearfix"></div>
+					
+					<div id="copyright">&copy; 2012 - <a href="http://www.antoinelorcy.com">Antoine Lorcy</a></div>
+				</div>
+		    </div><!-- #global -->
+		</td></tr></table>
+		
+		<div id="swiffContainer">
+		
+		</div>
+		
+		<div id="player">
+			<div id="content-player">
+				<div id="controles">
+					<ul>
+						<li><a href="#" class="prev">Prev</a></li>
+						<li><a href="#" class="lire">Lire</a></li>
+						<li><a href="#" class="stop">Stop</a></li>
+						
+						<li><a href="#" class="next">Next</a></li>
+					</ul>
+				</div>
+				<div id="infos-piste">
+					<div id="titre"><span class="artiste"></span>&nbsp;-&nbsp;<span class="chanson"></span></div>
+					<div id="duree"><span id="timer">00 : 00</span> / <span id="total">00 : 00</span></div>
+					<div id="volume">
+						<span id="volume-remplissage-gauche"></span>
+						<span id="volume-remplissage"></span>
+						<img src="img/handler.png" id="volumeHandler" />
+					</div>
+					<div id="bar">
+						<span id="remplissage-gauche"></span>
+						<span id="remplissage"></span>
+						<img src="img/handler.png" id="handler" />
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+	</div>
+	<!-- END Wrapper -->	
+	
+</body>
+</html>
